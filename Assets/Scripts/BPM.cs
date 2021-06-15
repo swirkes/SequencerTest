@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BPM : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class BPM : MonoBehaviour
     private float barInterval, barTimer, beatInterval, beatTimer;
     public static bool isNewBar, isBeat;
     public static int barCount, beatCount;
+    private static int upperTimeSignature;
+    public TextMeshProUGUI timeSignature;
 
     private void Awake()
     {
@@ -58,6 +61,8 @@ public class BPM : MonoBehaviour
             isBeat = true;
             beatCount++;
             Debug.Log("Beat");
+            upperTimeSignature = (beatCount % 8) + 1;
+            timeSignature.text = upperTimeSignature.ToString() + "/8";
         }
     }
 

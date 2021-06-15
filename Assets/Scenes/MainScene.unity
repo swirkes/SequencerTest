@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpm: 60
+  timeSignature: {fileID: 1221293294}
 --- !u!4 &142886895
 Transform:
   m_ObjectHideFlags: 0
@@ -647,7 +648,7 @@ GameObject:
   - component: {fileID: 1221293295}
   - component: {fileID: 1221293294}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TimeSignature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
