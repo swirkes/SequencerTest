@@ -11,7 +11,7 @@ public class BPM : MonoBehaviour
     private float barInterval, barTimer, beatInterval, beatTimer;
     public static bool isNewBar, isBeat;
     public static int barCount, beatCount;
-    private static int upperTimeSignature;
+    public static int upperTimeSignature;
     public TextMeshProUGUI timeSignature;
 
     private void Awake()
