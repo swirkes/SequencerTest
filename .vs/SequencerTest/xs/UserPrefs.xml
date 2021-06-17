@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{61F17EB5-AE6C-6D3A-8681-2FB20C25B28C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Button.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BPM.cs">
     <Files>
+      <File FileName="Assets/Scripts/PlayQuantizedNotes.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BPM.cs" Line="14" Column="11" />
-      <File FileName="Assets/Scripts/PlayQuantizedNotes.cs" Line="21" Column="43" />
       <File FileName="Assets/Scripts/SoundManager.cs" />
-      <File FileName="Assets/Scripts/Button.cs" Line="1" Column="1" />
+      <File FileName="Assets/Sounds/FadeOutMixer.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a460c8a5-945d-4cb6-9992-c2a8b5bfb9ed" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1174845d-b48b-4928-ab95-6c355f9acf5d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

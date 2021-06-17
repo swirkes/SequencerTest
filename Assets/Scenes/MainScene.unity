@@ -5324,8 +5324,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3671dd5536a7477e998df4d4176f848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggleList0:
+  - {fileID: 1781154215}
+  - {fileID: 2000203317}
+  - {fileID: 114953981}
+  - {fileID: 57325757}
+  - {fileID: 1366941226}
+  - {fileID: 1706909993}
+  - {fileID: 991232421}
+  - {fileID: 1206577677}
+  toggleList1:
+  - {fileID: 2001697301}
+  - {fileID: 746500316}
+  - {fileID: 837085385}
+  - {fileID: 779080172}
+  - {fileID: 494458894}
+  - {fileID: 1233838380}
+  - {fileID: 1732511728}
+  - {fileID: 1461190967}
+  toggleList2:
+  - {fileID: 504031444}
+  - {fileID: 1792456403}
+  - {fileID: 933480150}
+  - {fileID: 1206250594}
+  - {fileID: 572609602}
+  - {fileID: 1306100741}
+  - {fileID: 1703840145}
+  - {fileID: 1368791983}
+  toggleList3:
+  - {fileID: 2033490314}
+  - {fileID: 1496771841}
+  - {fileID: 421319931}
+  - {fileID: 282240096}
+  - {fileID: 1046684069}
+  - {fileID: 1589093774}
+  - {fileID: 180696095}
+  - {fileID: 1830752442}
+  toggleList4:
+  - {fileID: 204513807}
+  - {fileID: 368738110}
+  - {fileID: 1826407297}
+  - {fileID: 1881247842}
+  - {fileID: 230311358}
+  - {fileID: 1278695470}
+  - {fileID: 493988422}
+  - {fileID: 1277197350}
+  toggleList5:
+  - {fileID: 881881915}
+  - {fileID: 434522702}
+  - {fileID: 419794389}
+  - {fileID: 201307989}
+  - {fileID: 1767658795}
+  - {fileID: 1975291740}
+  - {fileID: 164487931}
+  - {fileID: 1012831967}
+  toggleList6:
+  - {fileID: 1429144220}
+  - {fileID: 805247598}
+  - {fileID: 356049643}
+  - {fileID: 986185390}
+  - {fileID: 1760090293}
+  - {fileID: 1880928846}
+  - {fileID: 1242541708}
+  - {fileID: 180253153}
+  toggleList7:
+  - {fileID: 690742093}
+  - {fileID: 427807580}
+  - {fileID: 111841321}
+  - {fileID: 718541846}
+  - {fileID: 492549612}
+  - {fileID: 2091601959}
+  - {fileID: 582655811}
+  - {fileID: 1524843718}
   soundManager: {fileID: 1719751921}
-  note_a: {fileID: 8300000, guid: 001c79329a0ad41618361968942470f3, type: 3}
+  audioClips:
+  - {fileID: 8300000, guid: 001c79329a0ad41618361968942470f3, type: 3}
+  - {fileID: 8300000, guid: 704fe964007524619886223045cffee1, type: 3}
+  - {fileID: 8300000, guid: 9b1928633033a490cbce671f80156bef, type: 3}
+  - {fileID: 8300000, guid: 7d9a561f1dd2944829921b942bf71027, type: 3}
+  - {fileID: 8300000, guid: 33c3e8bfd95b045a3a3fc8f9b3e2d6e6, type: 3}
+  - {fileID: 8300000, guid: fc29f49be0cf44ac9af82329df7a9afc, type: 3}
+  - {fileID: 8300000, guid: 17ffb743607cc402c86f1b98f813e815, type: 3}
+  - {fileID: 8300000, guid: a119b534a0a2948e9a589d6261237eb3, type: 3}
 --- !u!4 &600011774
 Transform:
   m_ObjectHideFlags: 0
@@ -13155,7 +13235,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 600011773}
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1792456401
 GameObject:
@@ -15564,7 +15655,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 600011773}
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &2065775042
 GameObject:
