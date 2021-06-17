@@ -6,147 +6,122 @@ using UnityEngine.UI;
 public class PlayQuantizedNotes : MonoBehaviour
 {
 
-    public Toggle[] toggleList0 = new Toggle[8];
-    public Toggle[] toggleList1 = new Toggle[8];
-    public Toggle[] toggleList2 = new Toggle[8];
-    public Toggle[] toggleList3 = new Toggle[8];
-    public Toggle[] toggleList4 = new Toggle[8];
-    public Toggle[] toggleList5 = new Toggle[8];
-    public Toggle[] toggleList6 = new Toggle[8];
-    public Toggle[] toggleList7 = new Toggle[8];
+    public Toggle[] toggleColumnA = new Toggle[8];
+    public Toggle[] toggleColumnB = new Toggle[8];
+    public Toggle[] toggleColumnC = new Toggle[8];
+    public Toggle[] toggleColumnD = new Toggle[8];
+    public Toggle[] toggleColumnE = new Toggle[8];
+    public Toggle[] toggleColumnF = new Toggle[8];
+    public Toggle[] toggleColumnG = new Toggle[8];
+    public Toggle[] toggleColumnH = new Toggle[8];
     public SoundManager soundManager;
     public AudioClip[] audioClips = new AudioClip[8];
 
-        
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         PlaySequence();
-        //if(BPM.isNewBar)
-        //{
-        //    if(toggleList0[0].isOn)
-        //    {
-        //        //soundManager.StopNote(note_a);
-        //        soundManager.PlayNote(note_a);
-        //    }
-            
-            
-        //}
-        //if(BPM.isBeat && BPM.upperTimeSignature == 4)
-        //{
-        //    if (toggleList0[3].isOn)
-        //    {
-        //        //soundManager.StopNote(note_a);
-        //        soundManager.PlayNote(note_a);
-        //    }
-            
 
     }
 
     void PlaySequence()
     {
-       
-        switch (BPM.upperTimeSignature)
+        if (BPM.isNewBar)
         {
-            case 1:
-                if(BPM.isBeat)
+            for (int i = 0; i < toggleColumnA.Length; i++)
+            {
+                if (toggleColumnA[i].isOn)
                 {
-                    for (int i = 0; i < 8; i++)
-                    {
-                        if (toggleList0[i].isOn)
-                        {
-
-                            soundManager.StopNote(audioClips[i]);
-                            soundManager.PlayNote(audioClips[i]);
-                            
-                        }
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                
-                break;
-            case 2:
-                if(BPM.isBeat)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 2)
+        {
+            for (int i = 0; i < toggleColumnB.Length; i++)
+            {
+                if (toggleColumnB[i].isOn)
                 {
-                    for (int i = 0; i < 8; i++)
-                    {
-                        if (toggleList1[i].isOn)
-                        {
-                            soundManager.StopNote(audioClips[i]);
-                            soundManager.PlayNote(audioClips[i]);
-                        }
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                
-                break;
-            case 3:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 3)
+        {
+            for (int i = 0; i < toggleColumnC.Length; i++)
+            {
+                if (toggleColumnC[i].isOn)
                 {
-                    if (toggleList2[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            case 4:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 4)
+        {
+            for (int i = 0; i < toggleColumnD.Length; i++)
+            {
+                if (toggleColumnD[i].isOn)
                 {
-                    if (toggleList3[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            case 5:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 5)
+        {
+            for (int i = 0; i < toggleColumnE.Length; i++)
+            {
+                if (toggleColumnE[i].isOn)
                 {
-                    if (toggleList4[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            case 6:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 6)
+        {
+            for (int i = 0; i < toggleColumnF.Length; i++)
+            {
+                if (toggleColumnF[i].isOn)
                 {
-                    if (toggleList5[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            case 7:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 7)
+        {
+            for (int i = 0; i < toggleColumnG.Length; i++)
+            {
+                if (toggleColumnG[i].isOn)
                 {
-                    if (toggleList6[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            case 8:
-                for (int i = 0; i < 8; i++)
+            }
+        }
+        if (BPM.isBeat && BPM.upperTimeSignature == 8)
+        {
+            for (int i = 0; i < toggleColumnH.Length; i++)
+            {
+                if (toggleColumnH[i].isOn)
                 {
-                    if (toggleList7[i].isOn)
-                    {
-                        soundManager.StopNote(audioClips[i]);
-                        soundManager.PlayNote(audioClips[i]);
-                    }
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
                 }
-                break;
-            default:
-                break;
-
+            }
         }
     }
 }
+

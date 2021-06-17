@@ -23,31 +23,31 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayNote(AudioClip clip)
+    public void PlayNote(AudioClip clip, float volume)
     {
         for(int i = 0; i < soundFileList.Count; i++)
         {
             if(!soundFileList[i].isPlaying)
             {
                 soundFileList[i].clip = clip;
-                soundFileList[i].volume = 0.25f;
-                soundFileList[i].PlayOneShot(clip);
+                soundFileList[i].volume = volume;
+                soundFileList[i].Play();
                 return;
             }
             else if (soundFileList[i].isPlaying)
             {
                 soundFileList[i].clip = clip;
-                soundFileList[i].volume = 0.25f;
+                soundFileList[i].volume = volume;
                 soundFileList[i].Stop();
-                soundFileList[i].PlayOneShot(clip);
+                soundFileList[i].Play();
             }
         }
         GameObject note = new GameObject("note");
         note.AddComponent<AudioSource>();
         note.transform.parent = this.transform;
         note.GetComponent<AudioSource>().clip = clip;
-        note.GetComponent<AudioSource>().volume = 0.25f;
-        note.GetComponent<AudioSource>().PlayOneShot(clip);
+        note.GetComponent<AudioSource>().volume = volume;
+        note.GetComponent<AudioSource>().Play();
         soundFileList.Add(note.GetComponent<AudioSource>());
     }
 
