@@ -15,6 +15,7 @@ public class PlayQuantizedNotes : MonoBehaviour
     public Toggle[] toggleColumnF = new Toggle[8];
     public Toggle[] toggleColumnG = new Toggle[8];
     public Toggle[] toggleColumnH = new Toggle[8];
+    public Button Preset1;
     public SoundManager soundManager;
     public AudioClip[] audioClips = new AudioClip[8];
     
@@ -42,6 +43,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnA[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
@@ -53,6 +55,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnB[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
@@ -64,6 +67,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnC[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
@@ -75,6 +79,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnD[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
@@ -86,6 +91,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnE[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
@@ -97,6 +103,7 @@ public class PlayQuantizedNotes : MonoBehaviour
             {
                 if (toggleColumnF[i].isOn)
                 {
+                    PlayerPrefs.SetInt("ToggleASelected", i);
                     soundManager.StopNote(audioClips[i]);
                     soundManager.PlayNote(audioClips[i], 0.125f);
                 }
