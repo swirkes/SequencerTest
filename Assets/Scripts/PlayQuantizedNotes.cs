@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayQuantizedNotes : MonoBehaviour
 {
 
+    
     public Toggle[] toggleColumnA = new Toggle[8];
     public Toggle[] toggleColumnB = new Toggle[8];
     public Toggle[] toggleColumnC = new Toggle[8];
@@ -16,6 +17,7 @@ public class PlayQuantizedNotes : MonoBehaviour
     public Toggle[] toggleColumnH = new Toggle[8];
     public SoundManager soundManager;
     public AudioClip[] audioClips = new AudioClip[8];
+    
 
 
     // Start is called before the first frame update
