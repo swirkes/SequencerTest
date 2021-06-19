@@ -1,18 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
+using UnityEngine.EventSystems;
 
-public class Preset1 : MonoBehaviour
+public class Preset1 : MonoBehaviour, ISelectHandler
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public ToggleGroup ToggleGroupA;
+    public PlayQuantizedNotes playQuantizedNotes;
+
+
+    public void OnSelect(BaseEventData eventData)
     {
+        Debug.Log(this.gameObject.name + " was selected");
+
+        Debug.Log("Preset1 SCRIPT: " + PlayerPrefs.GetInt("ToggleAPreset0").ToString());
+        playQuantizedNotes.LoadSequence();
+        PlayQuantizedNotes.presets[0] = true;
+        PlayQuantizedNotes.presets[1] = false;
+        PlayQuantizedNotes.presets[2] = false;
+
+    }
+    void Awake()
+    {
+        //PlayerPrefs.Set
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Toggle selectedToggle = ToggleGroupA.ActiveToggles().FirstOrDefault();
         
+        //Debug.Log(selectedToggle);
     }
+
+    
 }

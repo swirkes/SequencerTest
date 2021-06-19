@@ -5679,7 +5679,6 @@ MonoBehaviour:
   - {fileID: 2091601959}
   - {fileID: 582655811}
   - {fileID: 1524843718}
-  Preset1: {fileID: 0}
   soundManager: {fileID: 1719751921}
   audioClips:
   - {fileID: 8300000, guid: 001c79329a0ad41618361968942470f3, type: 3}
@@ -5714,6 +5713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615640137}
   - component: {fileID: 615640138}
+  - component: {fileID: 615640139}
   m_Layer: 0
   m_Name: ToggleGroupA
   m_TagString: Untagged
@@ -5756,6 +5756,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &615640139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615640136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffe04168150643ca941a1d49f0ae3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615748312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6443,7 +6455,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716320097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6777,6 +6789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751220085}
   - component: {fileID: 751220086}
+  - component: {fileID: 751220087}
   m_Layer: 5
   m_Name: Preset1
   m_TagString: Untagged
@@ -6851,6 +6864,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &751220087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751220084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335852021c2da45a0ae330055d171ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToggleGroupA: {fileID: 615640138}
+  playQuantizedNotes: {fileID: 600011773}
 --- !u!1 &779080170
 GameObject:
   m_ObjectHideFlags: 0
@@ -14282,7 +14309,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754337472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

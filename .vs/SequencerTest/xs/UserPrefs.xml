@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{61F17EB5-AE6C-6D3A-8681-2FB20C25B28C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Preset1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ToggleGroupA.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayQuantizedNotes.cs" Line="10" Column="51" />
+      <File FileName="Assets/Scripts/PlayQuantizedNotes.cs" Line="62" Column="18" />
       <File FileName="Assets/Scripts/BPM.cs" />
       <File FileName="Assets/Scripts/SoundManager.cs" />
-      <File FileName="Assets/Scripts/Preset1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Preset1.cs" Line="41" Column="5" />
+      <File FileName="Assets/ToggleGroupA.cs" Line="7" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5846f72b-7f8b-4e05-ae50-6ff22a87b8f8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8f00475f-091b-4332-a7e9-1d4b0e710892" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

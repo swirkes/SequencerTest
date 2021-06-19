@@ -15,122 +15,79 @@ public class PlayQuantizedNotes : MonoBehaviour
     public Toggle[] toggleColumnF = new Toggle[8];
     public Toggle[] toggleColumnG = new Toggle[8];
     public Toggle[] toggleColumnH = new Toggle[8];
-    public Button Preset1;
+    //public Toggle[] presets = new Toggle[3];
     public SoundManager soundManager;
     public AudioClip[] audioClips = new AudioClip[8];
-    
+    public static bool[] presets = new bool[3];
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        presets[0] = true;
+        presets[1] = false;
+        presets[2] = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         PlaySequence();
-
+        SaveSequence();
     }
 
     void PlaySequence()
     {
-        if (BPM.isNewBar)
+        PlayColumn(toggleColumnA, 1);
+        PlayColumn(toggleColumnB, 2);
+        PlayColumn(toggleColumnC, 3);
+        PlayColumn(toggleColumnD, 4);
+        PlayColumn(toggleColumnE, 5);
+        PlayColumn(toggleColumnF, 6);
+        PlayColumn(toggleColumnG, 7);
+        PlayColumn(toggleColumnH, 8);
+    }
+
+    void SaveSequence()
+    {
+        for (int i = 0; i < presets.Length - 1; i++)
         {
-            for (int i = 0; i < toggleColumnA.Length; i++)
+            if (presets[i])
             {
-                if (toggleColumnA[i].isOn)
+                for (int j = 0; j < 8; j++)
                 {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 2)
-        {
-            for (int i = 0; i < toggleColumnB.Length; i++)
-            {
-                if (toggleColumnB[i].isOn)
-                {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 3)
-        {
-            for (int i = 0; i < toggleColumnC.Length; i++)
-            {
-                if (toggleColumnC[i].isOn)
-                {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 4)
-        {
-            for (int i = 0; i < toggleColumnD.Length; i++)
-            {
-                if (toggleColumnD[i].isOn)
-                {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 5)
-        {
-            for (int i = 0; i < toggleColumnE.Length; i++)
-            {
-                if (toggleColumnE[i].isOn)
-                {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 6)
-        {
-            for (int i = 0; i < toggleColumnF.Length; i++)
-            {
-                if (toggleColumnF[i].isOn)
-                {
-                    PlayerPrefs.SetInt("ToggleASelected", i);
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 7)
-        {
-            for (int i = 0; i < toggleColumnG.Length; i++)
-            {
-                if (toggleColumnG[i].isOn)
-                {
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
-                }
-            }
-        }
-        if (BPM.isBeat && BPM.upperTimeSignature == 8)
-        {
-            for (int i = 0; i < toggleColumnH.Length; i++)
-            {
-                if (toggleColumnH[i].isOn)
-                {
-                    soundManager.StopNote(audioClips[i]);
-                    soundManager.PlayNote(audioClips[i], 0.125f);
+                    if (toggleColumnA[j].isOn)
+                    {
+                        PlayerPrefs.SetInt("ToggleAPreset" + i.ToString(), j);
+                        Debug.Log("Column A: Preset: " + i.ToString() + " Row: " + j.ToString());
+                        Debug.Log(PlayerPrefs.GetInt("ToggleAPreset0"));
+                    }
                 }
             }
         }
     }
+
+    public void LoadSequence()
+    {
+        toggleColumnA[PlayerPrefs.GetInt("ToggleApreset0")].isOn = true;
+    }
+
+    void PlayColumn(Toggle[] toggles, int beat)
+    {
+        if (BPM.isBeat && BPM.upperTimeSignature == beat)
+        {
+            for (int i = 0; i < toggles.Length; i++)
+            {
+                if (toggles[i].isOn)
+                {
+                    soundManager.StopNote(audioClips[i]);
+                    soundManager.PlayNote(audioClips[i], 0.125f);
+                }
+                
+            }
+        }
+    }
+
 }
 
