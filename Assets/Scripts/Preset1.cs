@@ -11,7 +11,9 @@ public class Preset1 : MonoBehaviour, ISelectHandler
     public ToggleGroup ToggleGroupA;
     public PlayQuantizedNotes playQuantizedNotes;
 
-
+    //Part of the non-functioning preset logic. The idea was to call the
+    //LoadSequence() function from the PlayQuantizedNotes class when the
+    //button is selected. 
     public void OnSelect(BaseEventData eventData)
     {
         Debug.Log(this.gameObject.name + " was selected");

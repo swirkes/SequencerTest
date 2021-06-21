@@ -14,6 +14,7 @@ public class BPM : MonoBehaviour
     public static int upperTimeSignature;
     public TextMeshProUGUI timeSignature;
 
+    //Make sure there is only one instance of the game object.
     private void Awake()
     {
         if(BPMInstance != null && BPMInstance != this)
@@ -27,18 +28,14 @@ public class BPM : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         DetectBeat();
     }
 
+    //Using deltaTime to count seconds and divide them by the tempo to get
+    //the bar length. Dividing that by 8 to get each beat and sending that
+    //value to the game screen to display the current column.
     void DetectBeat()
     {
         isNewBar = false;

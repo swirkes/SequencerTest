@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     private List<AudioSource> soundFileList;
     
     
-    // Start is called before the first frame update
+    //Create a list of audio source game objects.
     void Start()
     {
         soundFileList = new List<AudioSource>();
@@ -23,6 +23,9 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //Iterate through the list of audio sources and if it's not playing,
+    //play it. If it is playing, stop the clip to avoid overdriving the
+    //soundcard and then play it.
     public void PlayNote(AudioClip clip, float volume)
     {
         for(int i = 0; i < soundFileList.Count; i++)
@@ -42,15 +45,9 @@ public class SoundManager : MonoBehaviour
                 soundFileList[i].Play();
             }
         }
-        GameObject note = new GameObject("note");
-        note.AddComponent<AudioSource>();
-        note.transform.parent = this.transform;
-        note.GetComponent<AudioSource>().clip = clip;
-        note.GetComponent<AudioSource>().volume = volume;
-        note.GetComponent<AudioSource>().Play();
-        soundFileList.Add(note.GetComponent<AudioSource>());
     }
 
+    //If the clip is playing, stop it.
     public void StopNote(AudioClip clip)
     {
         for (int i = 0; i < soundFileList.Count; i++)
@@ -58,11 +55,9 @@ public class SoundManager : MonoBehaviour
             if (soundFileList[i].isPlaying)
             {
                 soundFileList[i].clip = clip;
-     
                 soundFileList[i].Stop();
                 return;
             }
         }
-        
     }  
 }

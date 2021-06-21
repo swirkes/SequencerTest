@@ -15,13 +15,13 @@ public class PlayQuantizedNotes : MonoBehaviour
     public Toggle[] toggleColumnF = new Toggle[8];
     public Toggle[] toggleColumnG = new Toggle[8];
     public Toggle[] toggleColumnH = new Toggle[8];
-    //public Toggle[] presets = new Toggle[3];
-    public SoundManager soundManager;
-    public AudioClip[] audioClips = new AudioClip[8];
     public static bool[] presets = new bool[3];
 
+    public AudioClip[] audioClips = new AudioClip[8];
 
-    // Start is called before the first frame update
+    public SoundManager soundManager;
+
+    //Begin with preset1 selected.
     void Start()
     {
         presets[0] = true;
@@ -37,6 +37,8 @@ public class PlayQuantizedNotes : MonoBehaviour
         SaveSequence();
     }
 
+    //call the PlayColumn() function on all the columns for all the beats.
+    //Maybe unnecessary, but it keeps the Update() function clean.
     void PlaySequence()
     {
         PlayColumn(toggleColumnA, 1);
@@ -49,6 +51,9 @@ public class PlayQuantizedNotes : MonoBehaviour
         PlayColumn(toggleColumnH, 8);
     }
 
+    //Part of the preset logic. Not functioning, but the idea is to check
+    //which preset is selected, then iterate through each column (only column A
+    //here) and set a PlayerPrefs int to the corresponding row.
     void SaveSequence()
     {
         for (int i = 0; i < presets.Length - 1; i++)
@@ -68,11 +73,16 @@ public class PlayQuantizedNotes : MonoBehaviour
         }
     }
 
+    //Part of the preset logic. Not functioning, but the idea is to get the
+    //PlayerPrefs int that was saved by the above function and use it to turn
+    //the corresponding toggle on.
     public void LoadSequence()
     {
         toggleColumnA[PlayerPrefs.GetInt("ToggleApreset0")].isOn = true;
     }
 
+    //Iterate through toggle array. If the toggle of the column corresponding
+    //to the beat is on, stop the note (to avoid overdriving) and play it.
     void PlayColumn(Toggle[] toggles, int beat)
     {
         if (BPM.isBeat && BPM.upperTimeSignature == beat)
