@@ -4935,9 +4935,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0
+  far clip plane: 100
+  field of view: 95
   orthographic: 1
   orthographic size: 100
   m_Depth: 0
@@ -5679,7 +5679,6 @@ MonoBehaviour:
   - {fileID: 2091601959}
   - {fileID: 582655811}
   - {fileID: 1524843718}
-  soundManager: {fileID: 1719751921}
   audioClips:
   - {fileID: 8300000, guid: 001c79329a0ad41618361968942470f3, type: 3}
   - {fileID: 8300000, guid: 704fe964007524619886223045cffee1, type: 3}
@@ -5689,6 +5688,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fc29f49be0cf44ac9af82329df7a9afc, type: 3}
   - {fileID: 8300000, guid: 17ffb743607cc402c86f1b98f813e815, type: 3}
   - {fileID: 8300000, guid: a119b534a0a2948e9a589d6261237eb3, type: 3}
+  soundManager: {fileID: 1719751921}
 --- !u!4 &600011774
 Transform:
   m_ObjectHideFlags: 0
